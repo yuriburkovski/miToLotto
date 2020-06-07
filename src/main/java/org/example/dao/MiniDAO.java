@@ -2,7 +2,7 @@ package org.example.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import pl.wisniewsky.model.Mini;
+import org.example.model.Mini;
 
 import java.io.Serializable;
 import java.util.List;
