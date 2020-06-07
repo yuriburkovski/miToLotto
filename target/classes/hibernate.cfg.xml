@@ -12,5 +12,6 @@
     <property name="hbm2ddl.auto">update</property>
 
     <mapping class="org.example.model.Lotto"></mapping>
+    <mapping class="org.example.model.LottoPlus"></mapping>
     </session-factory>
 </hibernate-configuration>
