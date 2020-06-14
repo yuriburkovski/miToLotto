@@ -8,10 +8,12 @@ public abstract class SessionDAO<T> implements DAO<T> {
     protected final Session session;
 
     public SessionDAO(Session session) {
+
         this.session = session;
     }
 
     public void close() {
+
         session.close();
     }
 }
