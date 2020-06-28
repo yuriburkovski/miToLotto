@@ -16,7 +16,7 @@ public class MiniDAO extends SessionDAO<Mini> {
     @Override
     public void save(Mini objectToSave) {
         Transaction transaction = session.beginTransaction();
-        session.save(objectToSave);
+        session.saveOrUpdate(objectToSave);
         transaction.commit();
     }
 

@@ -17,7 +17,7 @@ import java.util.List;
         @Override
         public void save(LottoPlus objectToSave) {
             Transaction transaction = session.beginTransaction();
-            session.save(objectToSave);
+            session.saveOrUpdate(objectToSave);
             transaction.commit();
         }
 

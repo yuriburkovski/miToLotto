@@ -84,12 +84,11 @@ public class Joker implements Serializable {
 
     @Override
     public String toString() {
-        return "Joker{" +
-                "numLosowania=" + numLosowania +
-                ", numerki='" + numerki + '\'' +
-                ", dataLosowania=" + dataLosowania +
-                ", superszansaId=" + superszansaId +
-                ", joker=" + joker +
-                '}';
+        return "Joker:" +
+                "\nnumLosowania=" + numLosowania +
+                "\nnumerki='" + numerki + '\'' +
+                "\ndataLosowania=" + dataLosowania +
+                "\nsuperszansaId=" + superszansaId +
+                "\njoker=" + joker ;
     }
 }

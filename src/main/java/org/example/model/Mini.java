@@ -72,11 +72,10 @@ public class Mini implements Serializable {
 
     @Override
     public String toString() {
-        return "Mini{" +
-                "numerki='" + numerki + '\'' +
-                ", numLosowania=" + numLosowania +
-                ", dataLosowania=" + dataLosowania +
-                ", superszansaId=" + superszansaId +
-                '}';
+        return "Mini:" +
+                "\nnumerki='" + numerki + '\'' +
+                "\nnumLosowania=" + numLosowania +
+                "\ndataLosowania=" + dataLosowania +
+                "\nsuperszansaId=" + superszansaId ;
     }
 }

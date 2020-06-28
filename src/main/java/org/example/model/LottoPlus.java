@@ -73,12 +73,11 @@ import java.util.Date;
 
         @Override
         public String toString() {
-            return "LottoPlus{" +
-                    "numerki='" + numerki + '\'' +
-                    ", numLosowania=" + numLosowania +
-                    ", dataLosowania=" + dataLosowania +
-                    ", superszansaId=" + superszansaId +
-                    '}';
+            return "LottoPlus:" +
+                    "\nnumerki='" + numerki + '\'' +
+                    "\nnumLosowania=" + numLosowania +
+                    "\ndataLosowania=" + dataLosowania +
+                    "\nsuperszansaId=" + superszansaId ;
         }
 
     }

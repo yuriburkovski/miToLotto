@@ -1,8 +1,8 @@
 package org.example.dao;
 
+import org.example.model.Lotto;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.example.model.Lotto;
 
 import java.io.Serializable;
 import java.util.List;
@@ -16,7 +16,7 @@ public class LottoDAO extends SessionDAO<Lotto> {
     @Override
     public void save(Lotto objectToSave) {
         Transaction transaction = session.beginTransaction();
-        session.save(objectToSave);
+        session.saveOrUpdate(objectToSave);
         transaction.commit();
     }
 
@@ -33,7 +33,7 @@ public class LottoDAO extends SessionDAO<Lotto> {
     @Override
     public void update(Lotto objectToUpdate) {
         Transaction transaction = session.beginTransaction();
-        session.update(objectToUpdate);
+        session.saveOrUpdate(objectToUpdate);
         transaction.commit();
     }
 

@@ -72,11 +72,10 @@ public class Lotto implements Serializable {
 
     @Override
     public String toString() {
-        return "Lotto{" +
-                "numerki='" + numerki + '\'' +
-                ", numLosowania=" + numLosowania +
-                ", dataLosowania=" + dataLosowania +
-                ", superszansaId=" + superszansaId +
-                '}';
+        return "Lotto:" +
+                "\nnumerki='" + numerki + '\'' +
+                "\nnumLosowania=" + numLosowania +
+                "\ndataLosowania=" + dataLosowania +
+                "\nsuperszansaId=" + superszansaId ;
     }
 }

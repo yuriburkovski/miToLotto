@@ -85,12 +85,11 @@ public class EkstraPensja implements Serializable {
 
     @Override
     public String toString() {
-        return "EkstraPensja{" +
-                "numLosowania=" + numLosowania +
-                ", extra=" + extra +
-                ", numerki='" + numerki + '\'' +
-                ", dataLosowania=" + dataLosowania +
-                ", superszansaId=" + superszansaId +
-                '}';
+        return "EkstraPensja:" +
+                "\nnumLosowania=" + numLosowania +
+                "\nextra=" + extra +
+                "\nnumerki='" + numerki + '\'' +
+                "\ndataLosowania=" + dataLosowania +
+                "\nsuperszansaId=" + superszansaId ;
     }
 }
