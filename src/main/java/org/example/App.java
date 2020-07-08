@@ -25,49 +25,15 @@ import java.io.IOException;
 import java.util.List;
 
 public class App extends Application {
-    private static SessionFactory factory;
+
+    private static MyThread newThread;
 
     public static void main(String[] args) {
-        intervalChecking();
+
+        newThread = new MyThread();
+        newThread.start();
         launch(args);
-    }
 
-    public static void intervalChecking(){
-        SessionProvider sessionProvider = SessionProvider.INSTANCE;
-        LottoDAO daoLotto = new LottoDAO(sessionProvider.getSession());
-        GamesIntervalCheckTask task = new GamesIntervalCheckTask(new GameFetchListener() {
-            @Override
-            public void onSuccess(Games games) {
-                Lotto lottoFromApi = games.getLotto();
-                Lotto lottoFromDb = daoLotto.get(games.getLotto().getNumLosowania());
-
-                if (lottoFromDb == null) {
-                    daoLotto.save(lottoFromApi);
-                } else {
-                    daoLotto.update(lottoFromDb);
-                }
-            }
-            @Override
-            public void onFail(String errorMassage) {
-                System.out.println(errorMassage);
-            }
-        });
-
-
-
-
-        GamesIntervalCheckExecutor executor = new GamesIntervalCheckExecutor();
-        executor.checkInInterval(task, TimePeriod.NORMAL);
-
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        executor.stopChecking();
-        daoLotto.close();
-        sessionProvider.closeFactory();
     }
 
     @Override

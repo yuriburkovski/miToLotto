@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static org.example.App.intervalChecking;
+
 
 public class MainSceneController implements Initializable {
 
@@ -57,7 +57,6 @@ public class MainSceneController implements Initializable {
                         e.printStackTrace();
                     }
                 }
-
         );
 
     }
