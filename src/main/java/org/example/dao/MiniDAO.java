@@ -22,12 +22,12 @@ public class MiniDAO extends SessionDAO<Mini> {
 
     @Override
     public Mini get(Serializable id) {
-        return null;
+        return session.get(Mini.class, id);
     }
 
     @Override
     public List<Mini> getAll() {
-        return null;
+        return session.createQuery(SELECT_ALL_QUERY).getResultList();
     }
 
     @Override
