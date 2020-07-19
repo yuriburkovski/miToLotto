@@ -13,5 +13,8 @@
 
     <mapping class="org.example.model.Lotto"></mapping>
     <mapping class="org.example.model.LottoPlus"></mapping>
+    <mapping class="org.example.model.Mini"></mapping>
+    <mapping class="org.example.model.Joker"></mapping>
+    <mapping class="org.example.model.EkstraPensja"></mapping>
     </session-factory>
 </hibernate-configuration>

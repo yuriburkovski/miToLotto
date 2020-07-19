@@ -7,12 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Lotto")
-public class Lotto implements Serializable {
+@Table(name = "Joker")
+public class Joker implements Serializable {
     @Id
     @Column(name = "numLosowania", unique = true, nullable = false)
     @SerializedName("num_losowania")
@@ -28,54 +28,67 @@ public class Lotto implements Serializable {
     @Column(name = "superszansaId")
     private Integer superszansaId;
 
-    public Lotto() {
+    @Column(name = "joker")
+    private Integer joker;
+
+    public Joker() {
     }
 
-    public Lotto(String numerki, Integer numLosowania, LocalDateTime dataLosowania, Integer superszansaId) {
-        this.numerki = numerki;
+    public Joker(Integer numLosowania, String numerki, LocalDateTime dataLosowania, Integer superszansaId, Integer joker) {
         this.numLosowania = numLosowania;
+        this.numerki = numerki;
         this.dataLosowania = dataLosowania;
         this.superszansaId = superszansaId;
-    }
-
-    public String getNumerki() {
-        return numerki;
-    }
-
-    public void setNumerki(String numerki) {
-        this.numerki = numerki;
+        this.joker = joker;
     }
 
     public Integer getNumLosowania() {
         return numLosowania;
     }
 
-    public void setNumLosowania(Integer numLosowania) {
-        this.numLosowania = numLosowania;
+    public String getNumerki() {
+        return numerki;
     }
 
     public LocalDateTime getDataLosowania() {
         return dataLosowania;
     }
 
-    public void setDataLosowania(LocalDateTime dataLosowania) {
-        this.dataLosowania = dataLosowania;
-    }
-
     public Integer getSuperszansaId() {
         return superszansaId;
+    }
+
+    public Integer getJoker() {
+        return joker;
+    }
+
+    public void setNumLosowania(Integer numLosowania) {
+        this.numLosowania = numLosowania;
+    }
+
+    public void setNumerki(String numerki) {
+        this.numerki = numerki;
+    }
+
+    public void setDataLosowania(LocalDateTime dataLosowania) {
+        this.dataLosowania = dataLosowania;
     }
 
     public void setSuperszansaId(Integer superszansaId) {
         this.superszansaId = superszansaId;
     }
 
+    public void setJoker(Integer joker) {
+        this.joker = joker;
+    }
+
     @Override
     public String toString() {
-        return "Lotto:" +
-                "\nnumerki='" + numerki + '\'' +
+        return "Joker:" +
                 "\nnumLosowania=" + numLosowania +
+                "\nnumerki='" + numerki + '\'' +
                 "\ndataLosowania=" + dataLosowania +
-                "\nsuperszansaId=" + superszansaId ;
+                "\nsuperszansaId=" + superszansaId +
+                "\njoker=" + joker ;
     }
 }
